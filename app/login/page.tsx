@@ -7,23 +7,34 @@ export default function Login() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div >
       <h1 className="text-3xl font-bold mb-6">Sign in with Google</h1>
-      <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          if (credentialResponse.credential) {
-            const decoded = jwtDecode(credentialResponse.credential);
-            console.log("Decoded user info:", decoded);
 
-            
-            localStorage.setItem("user", JSON.stringify(decoded));
-            router.push("/dashboard");
-          }
+
+      <div
+        style={{
+          width: "fit-content",
+          minWidth: "240px",
+          display: "flex",
+          justifyContent: "center",
         }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-      />
+      >
+        <GoogleLogin
+          onSuccess={(credentialResponse) => {
+            if (credentialResponse.credential) {
+              const decoded = jwtDecode(credentialResponse.credential);
+              console.log("Decoded user info:", decoded);
+
+
+              localStorage.setItem("user", JSON.stringify(decoded));
+              router.push("/dashboard");
+            }
+          }}
+          onError={() => {
+            console.log("Login Failed");
+          }}
+        />
+      </div>
     </div>
   );
 }

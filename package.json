@@ -8,17 +8,28 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.12.2",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/next-auth": "^3.13.0",
+    "flowbite": "^3.1.2",
+    "flowbite-react": "^0.12.10",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.552.0",
+    "mysql2": "^3.15.3",
+    "next": "16.0.0",
+    "next-auth": "^4.24.13",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.0"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "1.0.0",
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "autoprefixer": "^10.4.21",
+    "babel-plugin-react-compiler": "1.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5"
   }
 }

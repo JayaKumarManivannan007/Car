@@ -1,7 +1,6 @@
 import Link from "next/link";
 import "./news.css";
 
-import DrawerNavigation  from "../components/DrawerNavigation"; 
 
 export const dynamic = "force-dynamic";
 
